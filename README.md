@@ -60,13 +60,13 @@ Contributions are welcome! Please follow these steps:
 4. Push to the branch (`git push origin feature/YourFeature`).
 5. Open a pull request.
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Acknowledgments
 
-- Thanks to the Flask community for their excellent documentation and support.
+- Special thanks to the Flask community for their comprehensive documentation .
+- Gratitude to the maintainers of Pandas for their invaluable tool in data manipulation and cleaning.
+- Appreciation to the open-source community for their contributions and shared knowledge.
+
 
 ## Contact
 
