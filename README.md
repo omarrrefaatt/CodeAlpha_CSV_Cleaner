@@ -2,6 +2,11 @@
 
 CSV Cleaner is a web-based tool to clean your CSV files by removing duplicates and `None` values. This tool helps ensure your data is clean and ready for analysis, enhancing the quality of your decisions based on that data.
 
+
+
+<img width="1440" alt="Screenshot 2024-07-27 at 6 05 13 PM" src="https://github.com/user-attachments/assets/46794a13-809b-4c5f-a4f6-c26472109aee">
+<img width="1440" alt="Screenshot 2024-07-27 at 6 05 25 PM" src="https://github.com/user-attachments/assets/2dc7976e-5127-4534-ac77-456bc58d19e1">
+
 ## Features
 
 - Upload CSV files through a simple web interface.
