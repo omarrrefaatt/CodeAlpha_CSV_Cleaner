@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <title>CSV Cleaner</title>
+</head>
+<body>
+<div class="page">
+    <h1>Upload CSV File to Clean <img  src="{{ url_for('static', filename='images/cleaner.png') }}"  width="80px"  alt="cleaner"></h1>
+    <p class="slogan">Clean Data for Clearer Decisions.</p>
+    <form id="uploadForm" method="post" enctype="multipart/form-data">
+        <input type="file" name="file">
+        <input type="submit" value="Upload">
+    </form>
+    {% if msg %}
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>{{ msg }}</p>
+            <img  src="{{ url_for('static', filename='images/check.png') }}"  width="20px"  alt="Send Mail">
+        </div>
+    </div>
+    {% endif %}
+</div>
+
+<script>
+    // Get the modal
+    var modal = document.getElementById('myModal');
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName('close')[0];
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+        modal.classList.remove("show");
+        modal.classList.add("hide");
+        setTimeout(function() {
+            modal.style.display = 'none';
+        }, 300); // Match the transition duration
+    };
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.classList.remove("show");
+            modal.classList.add("hide");
+            setTimeout(function() {
+                modal.style.display = 'none';
+            }, 300); // Match the transition duration
+        }
+    };
+
+    // Show the modal if the msg is present
+    {% if msg %}
+    modal.style.display = 'block';
+    setTimeout(function() {
+        modal.classList.add("show");
+    }, 10); // Add delay to ensure transition effect
+    {% endif %}
+</script>
+</body>
+</html>
